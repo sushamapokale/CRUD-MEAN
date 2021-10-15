@@ -1,0 +1,26 @@
+
+
+<div class=" w-50 m-auto">
+ <h2>List Of Books</h2>
+    <table class="table table-light">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">author</th>
+            <th scope="col">price</th>
+            <th>action</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books">
+           
+            <td>{{book.name}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.price}}</td>
+            <td  (click)="delete(book._id)" class="text-danger cursor">delete</td>
+            <td (click)="update(book._id)" class="text-primary cursor">update</td>
+          </tr>
+        </tbody>
+    </table>
+</div>
